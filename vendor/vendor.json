@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "2nw1V9ibULD0IFXr35vxrnGF5e0=",
+			"path": "github.com/ajstarks/svgo",
+			"revision": "77292617dc6b7ef6c9813385a6b6089969997285",
+			"revisionTime": "2015-08-13T01:59:07Z"
+		}
+	],
+	"rootPath": "github.com/fabiolb/logo"
+}
