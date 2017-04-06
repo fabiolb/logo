@@ -14,6 +14,6 @@ in Safari and not any of the other browsers.
 1. Select the entire logo and click `Make Exportable` in the bottom-right corner
    and then export to SVG
 
-![Fabio](https://cdn.rawgit.com/fabiolb/logo/74a70c8a/logo.svg)
+![Fabio](https://cdn.rawgit.com/fabiolb/logo/f966a7d/logo.svg)
 
 (Update link in README with new git hash when image changes.)
