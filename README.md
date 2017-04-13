@@ -14,6 +14,14 @@ in Safari and not any of the other browsers.
 1. Select the entire logo and click `Make Exportable` in the bottom-right corner
    and then export to SVG
 
-![Fabio](https://cdn.rawgit.com/fabiolb/logo/f966a7d/logo.svg)
+<img src="https://cdn.rawgit.com/fabiolb/logo/f966a7d/logo.svg" height="48"/>
 
 (Update link in README with new git hash when image changes.)
+
+To create the logo without the fabio text run
+
+`go run main.go -text=false > logo-no-text.svg`
+
+This creates a 272x145 canvas with a transparent background.
+I need to update the code to create a rectangular logo. The
+`logo-no-text*` PNGs have been created by hand.
