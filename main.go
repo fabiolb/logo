@@ -1,12 +1,17 @@
 package main
 
 import (
+	"flag"
 	"os"
 
 	svg "github.com/ajstarks/svgo"
 )
 
 func main() {
+	var showText bool
+	flag.BoolVar(&showText, "text", true, "render 'Fabio' in the logo")
+	flag.Parse()
+
 	var (
 		// box dimensions
 		bW   = 80     // box width
@@ -18,8 +23,8 @@ func main() {
 		botY    = bH + 4*bPad      // top of bottom row
 		centerX = bW + bPad + bW/2 // canvas center
 
-		// canvas dimensions
-		width  = 749 // by try and error
+		// canvas
+		width  = 749 // try and error for logo with text
 		height = 145
 
 		// colors
@@ -33,6 +38,10 @@ func main() {
 		textStyle     = "text-anchor:start;font-size:160px;font-family:MicrogrammaDMedExt;fill:" + darkBlue
 	)
 
+	if !showText {
+		width = 3*bW + 2*bPad
+	}
+
 	canvas := svg.New(os.Stdout)
 	canvas.Start(width, height)
 	canvas.Title("Fabio")
@@ -40,10 +49,12 @@ func main() {
 	// use this to determine the width
 	// canvas.Rect(0, 0, width, height, "fill:red")
 
-	// fabio
-	tX := 3*bW + 4*bPad
-	tY := botY + bH
-	canvas.Text(tX, tY, "Fabio", textStyle)
+	if showText {
+		// fabio
+		tX := 3*bW + 4*bPad
+		tY := botY + bH
+		canvas.Text(tX, tY, "Fabio", textStyle)
+	}
 
 	// boxes
 
