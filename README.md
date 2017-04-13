@@ -25,3 +25,5 @@ To create the logo without the fabio text run
 This creates a 272x145 canvas with a transparent background.
 I need to update the code to create a rectangular logo. The
 `logo-no-text*` PNGs have been created by hand.
+
+<img src="https://cdn.rawgit.com/fabiolb/logo/7116b74/logo-no-text.svg" height="48"/>
