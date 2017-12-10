@@ -35,7 +35,8 @@ func main() {
 		darkBoxStyle  = "fill:" + darkBlue
 		lightBoxStyle = "fill:" + lightBlue
 		lineStyle     = "stroke-width:6;stroke-linecap:round;stroke:" + lightBlue
-		textStyle     = "text-anchor:start;font-size:160px;font-family:MicrogrammaDMedExt;fill:" + darkBlue
+		textStyle     = "text-anchor:start;font-size:160px;font-family:Sportscenter;fill:" + darkBlue
+		textTransform = "matrix(1 0 0 1 291 140)"
 	)
 
 	if !showText {
@@ -53,6 +54,7 @@ func main() {
 		// fabio
 		tX := 3*bW + 4*bPad
 		tY := botY + bH
+		// todo(fs): add transform="<textTransform>" for reduced char spacing
 		canvas.Text(tX, tY, "Fabio", textStyle)
 	}
 

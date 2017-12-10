@@ -1,29 +1,17 @@
-# Fabio SVG Logo Creator
+# Fabio SVG Logo
 
-This creates the Fabio logo with the Microgramma font.
-Since this isn't a free font and I only have the TTF
-you need to use something like Sketch to convert the
-text to an outline path and then export to SVG.
+This contains the Fabio logo with the
+[Sportscenter](https://www.fontzillion.com/fonts/the-sports-fonts/sportscenter)
+font which is almost identical to the original Microgramma font.
 
-Embedding the necessary glyphs of the font works only
-in Safari and not any of the other browsers.
+The `logo-with-sportscenter.svg` contains the full color logo but the reduced
+character spacing transformation does not work in Safari and the other browsers
+won't render SVGs with glyphs.
 
-1. `go run main.go > logo-with-font.svg`
-1. Open `logo-with-font.svg` in Sketch
-1. Right-click the "Fabio" text and select `Convert to Outlines`
-1. Select the entire logo and click `Make Exportable` in the bottom-right corner
-   and then export to SVG
+The `logo-outline.svg` and `logo-outline-bw.svg` files contain no glyphs and work
+in all browsers.
 
-<img src="https://cdn.rawgit.com/fabiolb/logo/f966a7d/logo.svg" height="48"/>
-
-(Update link in README with new git hash when image changes.)
-
-To create the logo without the fabio text run
-
-`go run main.go -text=false > logo-no-text.svg`
-
-This creates a 272x145 canvas with a transparent background.
-I need to update the code to create a rectangular logo. The
-`logo-no-text*` PNGs have been created by hand.
-
-<img src="https://cdn.rawgit.com/fabiolb/logo/7116b74/logo-no-text.svg" height="48"/>
+The logo creator generates the logo with the Sportscenter font but the
+character spacing transformation is missing. There is also no code to transform
+it to outline since I've done that in Adobe Illustrator by hand. Consider it an
+exercise.
